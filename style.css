@@ -10,6 +10,7 @@ body {
     background-color: #000;
     color: #eee;
     font-size: 12px;
+    overflow-x: hidden;
 }
 
 header {
@@ -26,6 +27,7 @@ header a {
     color: #eee;
     margin-right: 40px;
     font-weight: 400;
+    font-size: 17px;
 }
 
 .container {
@@ -139,7 +141,7 @@ header a {
     gap: 10px;
     position: absolute;
     bottom: 120px;
-    left: 120px;
+    left: 200px;
     width: 300px;
 }
 
@@ -158,4 +160,25 @@ header a {
     background-color: #eee;
     color: #000;
     transform: 0.7s;
+}
+
+.container .next .thumb {
+    animation: effectNextThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectNextThumb {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+.container .next .thumb .thumb-item:nth-last-child(1) {
+    animation: effectLastThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectLastThumb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
 }
