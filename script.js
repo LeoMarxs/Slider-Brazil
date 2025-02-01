@@ -4,11 +4,11 @@ let btnBack = document.querySelector('.back')
 
 let container = document.querySelector('.container')
 let list = document.querySelector('.container .list')
-let thumb = document.querySelector('container .thumb')
+let thumb = document.querySelector('.container .thumb')
 
 
-btnNext.onClick = () => moveItemsOnClick('next')
-btnBack.onClick = () => moveItemsOnClick('back')
+btnNext.onclick = () => moveItemsOnClick('next')
+btnBack.onclick = () => moveItemsOnClick('back')
 
 function moveItemsOnClick(type) {
     let listItems = document.querySelectorAll('.list .list-item')
